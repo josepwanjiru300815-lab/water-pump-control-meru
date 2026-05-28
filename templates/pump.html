@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Pump Control</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>PUMP CONTROL</h1>
+
+    <div class="card">
+
+        <div class="status">
+            Status: {{ pump_status }}
+        </div>
+
+        <a href="/pump/on">
+            <button class="green">
+                TURN ON
+            </button>
+        </a>
+
+        <a href="/pump/off">
+            <button class="red">
+                TURN OFF
+            </button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Scheduler</h2>
+
+        <h3>Delay Before Start</h3>
+
+        <input placeholder="H">
+        <input placeholder="M">
+        <input placeholder="S">
+
+        <h3>Run Duration</h3>
+
+        <input placeholder="H">
+        <input placeholder="M">
+        <input placeholder="S">
+
+        <br><br>
+
+        <button class="blue">
+            START SCHEDULE
+        </button>
+
+    </div>
+
+    <a href="/">
+        <button class="home">
+            HOME
+        </button>
+    </a>
+
+</body>
+
+</html>

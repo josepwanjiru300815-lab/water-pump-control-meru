@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Valve Control</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>VALVE CONTROL</h1>
+
+    <div class="card">
+
+        <div class="status">
+            Status: {{ valve_status }}
+        </div>
+
+        <a href="/valve/open">
+            <button class="green">
+                OPEN
+            </button>
+        </a>
+
+        <a href="/valve/close">
+            <button class="red">
+                CLOSE
+            </button>
+        </a>
+
+        <a href="/valve/stop">
+            <button class="gray">
+                STOP
+            </button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Scheduler</h2>
+
+        <h3>Action</h3>
+
+        <select>
+            <option>OPEN</option>
+            <option>CLOSE</option>
+        </select>
+
+        <h3>Delay Before Action</h3>
+
+        <input placeholder="H">
+        <input placeholder="M">
+        <input placeholder="S">
+
+        <h3>Run Duration</h3>
+
+        <input placeholder="H">
+        <input placeholder="M">
+        <input placeholder="S">
+
+        <br><br>
+
+        <button class="blue">
+            START SCHEDULE
+        </button>
+
+    </div>
+
+    <a href="/">
+        <button class="home">
+            HOME
+        </button>
+    </a>
+
+</body>
+
+</html>
